@@ -14,7 +14,6 @@ const {
  **/
 router.get("/", ensureLoggedIn, async function (req, res, next) {
     try {
-        const token = req.body._token;
         let users = await User.all();
         return res.json({ users });
     } catch (err) {
